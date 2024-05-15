@@ -1,4 +1,4 @@
-# Aula Ana Laura
+# Aula C/C++
 
 ## Conteúdo da apostila:
 
@@ -63,10 +63,37 @@
 
  Caso queira mostrar mais de uma variável, é só continuar adicionando os símbolos onde desejar, e adicionar as variáveis no fim, separadas sempre por vírgulas.
 
-![](image.png)
+![](./image.png)
 
  👇👇👇👇
 
- ![](image-1.png)
+![](./image-1.png)
 
- **Observação:** caso queira limitar a quantidade de números após o ponto em um número real, é só colocar o símbolo dessa maneira: **`%f.2f`** - substituindo o número 2 pela quantidade de casas que desejar.
+ > **Observação:** caso queira limitar a quantidade de números após o ponto em um número real, é só colocar o símbolo dessa maneira: **`%f.2f`** - substituindo o número 2 pela quantidade de casas que desejar.
+
+---
+
+### Pedir variáveis usando o *scanf()*
+
+Caso você precise que seu usuário informe algo pra você, é só usar o `scanf()`. Você pode criar uma variável sem passar qualquer valor pra ela, apenas informando o tipo.
+
+![](image-2.png)
+
+Depois de criar, use o `scanf()` de maneira bem parecida com o `printf()`, usando o símbolo devido pro tipo daquela variável e passando ela após a vírgula.
+
+![](image-3.png)
+
+> Vale notar o uso do símbolo "**&**" antes do nome da variável. Ele serve pra avisar ao computador o endereço daquela variável na memória da máquina. É algo mais complexo e talvez não valhe a pena o entendimento agora, mas não deve esquecer de usá-lo no `scanf()`
+
+Depois, a variável estará oficialmente com o valor que foi informado pelo usuário. Só pra ter certeza, vamos usar um `printf()` pra ver como ela ficou:
+
+![](image-4.png)
+
+Pra dar uma embelezada, ainda podemos colocar um `printf()` antes pra informar direitinho ao usuário o que estamos pedindo dele:
+
+![](image-6.png) 
+![](image-7.png)
+
+Na primeira linha, inseri o número que desajava no `scanf()`, e, logo depois, podemos ver que o programa imprimiu a frase com o 23 com sucesso.
+
+---
