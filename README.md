@@ -1,7 +1,5 @@
 # Aula C/C++
 
-## Conteúdo da apostila:
-
 ### O Básico:
 
 - `#include <bits/stdc++.h`: Biblioteca de comandos com tudo que é padrão pro C++ (`printf`, `scanf`, etc.);
@@ -17,7 +15,7 @@
 
 ### Variáveis e seus tipos:
 
-**Criar uma variável é criar um bloco de código com um nome e algum valor**
+**Criar uma variável é criar um bloco de código com um nome e algum valor.**
 
  *`variável idade tem o valor 15`*
 
@@ -31,7 +29,7 @@
 
  Traduzinho o que fizemos lá em cima para a linguagem de programação, é só colocar o tipo da variável antes do nome dela, e usar o "=" pra dar um valor. Temos:
 
- *`int idade = 15;`*
+ *`int idade = 15;`* ou apenas `int idade;` caso não queira dar um valor agora.
 
  | Tipo | Descrição |
  | ----------- | ----------- |
@@ -94,6 +92,87 @@ Pra dar uma embelezada, ainda podemos colocar um `printf()` antes pra informar d
 ![](image-6.png) 
 ![](image-7.png)
 
-Na primeira linha, inseri o número que desajava no `scanf()`, e, logo depois, podemos ver que o programa imprimiu a frase com o 23 com sucesso.
+Na primeira linha, inseri o número que desejava no `scanf()`, e, logo depois, podemos ver que o programa imprimiu a frase com o 23 com sucesso.
 
 ---
+
+### Operações matemáticas:
+
+ | Símbolo | Operação | Exemplo
+ | ----------- | ----------- | ----------- |
+ | + | Soma | 2+2 | 
+ | - | Subtração | 5-3
+ | / | Divisão | 4/2
+ | * | Multiplicação | 2*2
+
+ Fazer operações matemáticas com variáveis é mais simples do que parece: 
+
+ ![](image-8.png)
+
+ Caso precise que uma parte da expressão rode antes, pode utilizar os parênteses também:
+
+ ![](image-9.png)
+
+ > Obs: As expressões seguem a mesma regra básica da matemática. Multiplicação e divisão sempre acontecerão antes de soma e subtração.
+
+ Caso queira somar ou subtrair um determinado número de uma variável que já tem um valor, você só precisa reatribuir a ela seu próprio valor mais, ou menos, o número que deseja.
+
+![](image-10.png) ![](image-11.png)
+
+Veja que no exemplo acima, a variável número tinha o valor de cinquenta. Após dar a ela o valor dela mesma mais 10, ela começa a valer 60. 
+
+ ---
+
+ ### Condições:
+
+ Para checar condições no código, utilizamos a estrutura de `if` e `else`, literalmente traduzidos para `se` e `se não`. 
+
+ ```
+  se idade maior que 18 {
+    é maior de idade
+  } 
+  se não {
+    é menor de idade
+  }
+```
+
+No código, você sempre deve utilizar a estrutura de chaves para criar um bloco de código que deve acontecer se as condições (dentro de parênteses) forem ou não atendidas. Em **C**, temos:
+
+ ```C
+    if (idade > 18) {
+        printf("Maior de idade");
+    } 
+    else {
+        printf("Menor de idade");
+    }
+ ```
+---
+
+Para checar condições, temos um determinado número de símbolos que podem ser usados. Para checagens tanto de letras quanto números, temos:
+
+ | Nome | Símbolo | Exemplo
+ | ----------- | ----------- | ----------- |
+ | Igual à | == | `if (letra == "R") ` 
+ | Diferente de | != | `if (idade != 6)`
+
+Existem outros específicos para condições numéricas:
+
+ | Nome | Símbolo | Exemplo
+ | ----------- | ----------- | ----------- |
+ | Maior que | > | `if (media > 6)  `
+ | Menor que | < | `if (idade < 18)`
+ | Maior que ou igual a | >= | `if (idade >= 18)`
+ | Menor que ou igual a | <= | `if (resultado <= 1)`
+
+Sempre que uma condição for verdadeira, o bloco de código dentro das chaves do `if` vai rodar. Se a condição não for real, então será o bloco de códigos no `else`.
+
+---
+
+Caso precise checar várias condições de uma vez, utilizamos os chamados "*Operadores lógicos*":
+
+ | Nome | Símbolo | Exemplo
+ | ----------- | ----------- | ----------- |
+ | E| && | `if (idade > 18 && altura > 1.8) ` 
+ | Ou | \|\| | `if (preco > 100 \|\| desconto > 10)`
+
+ ---
